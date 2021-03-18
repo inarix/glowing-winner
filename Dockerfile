@@ -8,6 +8,6 @@ LABEL maintainer="Alexandre Saison <alexandre.saison@inarix.com>"
 
 COPY ./entrypoint.sh /app/entrypoint.sh
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["/app/entrypoint.sh"]
 
 
