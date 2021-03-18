@@ -5,5 +5,6 @@
 # Last Modified Date: 18.03.2021
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 set -e
-$return_value=echo "`yarn test`"
-sh -c echo "::set-output name=coverage::$return_value"
+$return_value=$(yarn run test)
+echo "values=$return_value"
+echo "::set-output name=coverage::$return_value"
