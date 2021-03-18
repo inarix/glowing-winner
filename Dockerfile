@@ -6,7 +6,8 @@ LABEL repository="https://github.com/inarix/glowing-winner"
 LABEL homepage="https://github.com/inarix/glowing-winner"
 LABEL maintainer="Alexandre Saison <alexandre.saison@inarix.com>"
 
-COPY entrypoint.sh /app/entrypoint.sh
+COPY ./entrypoint.sh /app/entrypoint.sh
+
 ENTRYPOINT ["/app/entrypoint.sh"]
 
 
