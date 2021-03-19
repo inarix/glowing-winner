@@ -4,9 +4,8 @@
 # Last Modified Date: 19.03.2021
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 set -e
-yarn install
 yarn run test > debug.log
-echo "Debug.log =>\n"
+echo "Debug.log"
 cat debug.log
 $return_value=`cat debug.log`
 echo "::set-output name=coverage::'$return_value'"
