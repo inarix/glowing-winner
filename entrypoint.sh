@@ -5,7 +5,7 @@
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 set -e
 yarn run test &> debug.log
-DEBUG=$(cat debug.log |  tail -n +12)
+DEBUG="$(cat debug.log |  tail -n +12)"
 echo "DEBUG='$DEBUG'"
 echo "::set-output name=coverage::'$DEBUG'"
 
