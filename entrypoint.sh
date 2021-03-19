@@ -4,7 +4,7 @@
 # Last Modified Date: 19.03.2021
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 set -e
-yarn run test > debug.log
+yarn run test 1> debug.log
 echo "Debug.log"
 echo "[BEFORE] DEBUG=nil"
 DEBUG=$(cat debug.log |  tail -n +2)
