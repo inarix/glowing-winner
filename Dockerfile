@@ -1,4 +1,4 @@
-FROM node:12-alpine3.10
+FROM node:12.0.0-slim
 WORKDIR /app
 
 LABEL version="1.0.0"
