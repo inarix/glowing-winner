@@ -4,8 +4,12 @@
 # Last Modified Date: 19.03.2021
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 set -e
+echo "TEST"
 yarn run test &> debug.log
-DEBUG="$(cat debug.log |  tail -n +12)"
+DEBUG="$(cat debug.log |  tail -n +2)"
 echo "DEBUG='$DEBUG'"
+DEBUG="${DEBUG//'%'/'%25'}"
+DEBUG="${DEBUG//$'\n'/'%0A'}"
+DEBUG="${DEBUG//$'\r'/'%0D'}"
 echo "::set-output name=coverage::'$DEBUG'"
 
