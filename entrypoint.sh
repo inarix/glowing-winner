@@ -5,9 +5,9 @@
 # Last Modified Date: 19.03.2021
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 set -e
-yarn test
 yarn run test &> debug.log
-DEBUG="$(cat debug.log |  tail -n +12)"
+DEBUG="$(cat debug.log | grep -n -C2 -e 'Stmts')"
+rm debug.log
 echo "DEBUG='$DEBUG'"
 DEBUG="${DEBUG//'%'/'%25'}"
 DEBUG="${DEBUG//$'\n'/'%0A'}"
