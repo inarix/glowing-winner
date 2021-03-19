@@ -4,10 +4,8 @@
 # Last Modified Date: 19.03.2021
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 set -e
-echo "TEST"
-yarn test
 yarn run test &> debug.log
-DEBUG="$(cat debug.log |  tail -n +2)"
+DEBUG="$(cat debug.log |  tail -n +12)"
 echo "DEBUG='$DEBUG'"
 DEBUG="${DEBUG//'%'/'%25'}"
 DEBUG="${DEBUG//$'\n'/'%0A'}"
