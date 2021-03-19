@@ -1,3 +1,4 @@
+#!/bin/sh
 # File              : entrypoint.sh
 # Author            : Alexandre Saison <alexandre.saison@inarix.com>
 # Date              : 18.03.2021
