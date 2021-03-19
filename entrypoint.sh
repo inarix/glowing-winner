@@ -6,6 +6,8 @@
 set -e
 yarn run test > debug.log
 echo "Debug.log"
-cat debug.log
-$return_value=`cat debug.log`
-echo "::set-output name=coverage::'$return_value'"
+echo "[BEFORE] DEBUG=nil"
+DEBUG=$(cat debug.log | tail -n +4)
+echo "[AFTER] DEBUG=$DEBUG"
+echo "::set-output name=coverage::'$DEBUG'"
+
