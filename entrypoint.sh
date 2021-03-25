@@ -8,4 +8,7 @@ yarn run test > debug.log
 DEBUG="$(cat debug.log | tail -n +6)"
 rm debug.log
 echo "DEBUG='$DEBUG'"
+DEBUG="${DEBUG//'%'/'%25'}"
+DEBUG="${DEBUG//$'\n'/'%0A'}"
 echo "::set-output name=coverage::'$DEBUG'"
+
