@@ -5,6 +5,7 @@
 # Last Modified Date: 25.03.2021
 # Last Modified By  : Alexandre Saison <alexandre.saison@inarix.com>
 yarn run test &> debug.log
+cat debug.log
 DEBUG="$(cat debug.log | grep -n -C2 -e 'Stmts')"
 rm debug.log
 echo "DEBUG='$DEBUG'"
